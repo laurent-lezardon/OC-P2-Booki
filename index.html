@@ -6,13 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Booki</title>
     <link rel="stylesheet" href="./CSS/normalize.css" />
-    <link rel="stylesheet" href="./CSS/style.css" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.2/css/fontawesome.min.css"
       integrity="sha384-X8QTME3FCg1DLb58++lPvsjbQoCT9bp3MsUU3grbIny/3ZwUJkRNO8NPW6zqzuW9"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="./CSS/style.css" />
+
     <meta name="description" content="" />
     <link
       rel="shortcut icon"
@@ -24,10 +25,75 @@
 
   <body>
     <header>
-      <img src="./assets/img/logo/Booki.png" alt="logo booki">
-      <nav>
-        <a href="#" selected>Hébergements</a><a href="#">Activités</a>
-      </nav>
+      <div class="header">
+        <div class="logo">
+          <img src="./assets/img/logo/Booki.png" alt="logo booki" />
+        </div>
+        <nav>
+          <a href="#" selected>Hébergements</a><a href="#">Activités</a>
+        </nav>
+      </div>
+      <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
+      <p>En plein centre ville ou en pleine nature</p>
     </header>
+    <main>
+      <!-- ------------- section recherche -------------------------------- -->
+      <section class="form">
+        <form action="#">
+          <div class="recherche">
+            <i class="fa-solid fa-location-dot"></i
+            ><input type="text" placeholder="Marseille, France" /><button
+              type="submit"
+            >
+              Rechercher
+            </button>
+          </div>
+          <div class="div-filtres">
+            <h2>Filtres</h2>
+            <div class="filtres">
+              <div class="checkbox">
+                <i class="fa-solid fa-money-bill-wave"></i>
+                <input type="checkbox" name="" id="economique" />
+                <label for="economique">Economique</label>
+              </div>
+              <div class="checkbox">
+                <i class="fa-solid fa-child-reaching"></i>
+                <input type="checkbox" name="" id="familial" />
+                <label for="familial">Familial</label>
+              </div>
+              <div class="checkbox">
+                <i class="fa-solid fa-heart"></i>
+                <input type="checkbox" name="" id="romantique" />
+                <label for="romantique">Romantique</label>
+              </div>
+              <div class="checkbox">
+                <i class="fa-solid fa-dog"></i>
+                <input type="checkbox" name="" id="animaux" />
+                <label for="animaux">Animaux</label>
+              </div>
+            </div>
+          </div>
+        </form>
+        <p>
+          <i class="fa-solid fa-info"></i> Plus de 500 logements sont
+          disponibles dans cette ville
+        </p>
+      </section>
+      <div class="div-hebergements">
+        <!-- ------------- aside -------------------------------- -->
+        <aside>
+
+        </aside>
+        <!-- ------------- section hebergements -------------------------------- -->
+        <section class="hebergements">
+
+        </section>
+      </div>
+        <!-- ------------- section activités -------------------------------- -->
+        <section class="activites"></section>
+      
+    </main>
+    <!-- ------------- footer -------------------------------- -->
+    <footer></footer>
   </body>
 </html>
