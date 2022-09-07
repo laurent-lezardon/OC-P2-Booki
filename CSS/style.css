@@ -20,7 +20,6 @@ body {
   font-family: "Raleway", serif;
   max-width: 1440px;
   margin: 0 auto;
-  background-color: var(--grey);
 }
 
 header,
@@ -32,9 +31,11 @@ a {
   text-decoration: none;
 }
 
+
+
 /* ============ HEADER =======================*/
 
-header {
+.header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -42,17 +43,111 @@ header {
 nav {
   align-self: flex-start;
 }
+header img {
+  transform: scale(0.5);
+}
 
 nav a {
   display: inline-block;
   width: 163px;
   padding-top: 48px;
   text-align: center;
+  font-weight: bolder;
   color: black;
+  transition: 0.2s;
 }
 
-nav a:active {
+nav a:hover {
   border-top: solid var(--blue) 2px;
-  margin-bottom: -2px;
+  color: var(--blue);
 }
 
+/* ============ SECTION RECHERCHE =======================*/
+/* ------------- recherche --------------- */
+.recherche {
+  height: 50px;
+  position: relative;
+}
+
+.recherche button {
+  height: 100%;
+  border-radius: 0 15px 15px 0;
+  position: absolute;
+  left: 237px;
+  background-color: var(--blue);
+  border: none;
+  color: white;
+  padding: 18px;
+}
+.recherche i {
+  height: 100%;
+  width: 50px;
+  border-radius: 15px 0 0 15px;
+
+  background-color: var(--grey);
+  position: absolute;
+  text-align: center;
+}
+.recherche input {
+  height: 100%;
+  position: absolute;
+  left: 50px;
+}
+
+/* ------------- filtres --------------- */
+
+.div-filtres {
+  display: flex;
+  margin: 32px 0;
+}
+.div-filtres h2 {
+  padding-right: 40px;
+}
+.filtres {
+  display: flex;
+  
+}
+
+
+
+.checkbox {
+  width: fit-content;
+  margin-right: 40px;
+}
+.checkbox input {
+  display: none;
+}
+.checkbox label {
+  display: inline-block;
+  padding: 15px;
+  border: solid 2px var(--grey);
+  border-radius: 25px;
+  transition: 0.3s;
+}
+.checkbox input:checked + label {
+  background-color: var(--grey);
+  border: solid 1px var(--blue)
+}
+
+/* ============ MEDIA QUERIES =======================*/
+
+/* ============ MOBILE < 768px  =======================*/
+
+@media screen and (max-width: 768px) {
+  .header {
+    display: block;
+    padding: 0;
+  }
+  .logo {
+    text-align: center;
+  }
+  nav a {
+    width: 50%;
+    padding-top: 0;
+    padding-bottom: 12px;
+  }
+  nav a:hover {
+    border-bottom: solid var(--blue) 2px;
+    border-top: none;
+  }
+}
