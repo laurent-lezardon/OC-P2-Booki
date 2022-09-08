@@ -7,20 +7,28 @@
     <title>Booki</title>
     <link rel="stylesheet" href="./CSS/normalize.css" />
     <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <!-- <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.2/css/fontawesome.min.css"
       integrity="sha384-X8QTME3FCg1DLb58++lPvsjbQoCT9bp3MsUU3grbIny/3ZwUJkRNO8NPW6zqzuW9"
       crossorigin="anonymous"
-    />
+    /> -->
     <link rel="stylesheet" href="./CSS/style.css" />
 
     <meta name="description" content="" />
     <link
       rel="shortcut icon"
-      href="./favicon/Lezardon logo.jpg"
+      href="./favicon/lezardon.jpg"
       type="image/x-icon"
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/235c844710.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
 
   <body>
@@ -30,70 +38,70 @@
           <img src="./assets/img/logo/Booki.png" alt="logo booki" />
         </div>
         <nav>
-          <a href="#" selected>Hébergements</a><a href="#">Activités</a>
+          <a href="#">Hébergements</a><a href="#">Activités</a>
         </nav>
       </div>
       <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
       <p>En plein centre ville ou en pleine nature</p>
     </header>
     <main>
-      <!-- ------------- section recherche -------------------------------- -->
+      <!-- =========== section recherche =========== -->
       <section class="form">
         <form action="#">
+          <!-- ____________ champ recherche _______________________ -->
           <div class="recherche">
-            <i class="fa-solid fa-location-dot"></i
-            ><input type="text" placeholder="Marseille, France" /><button
-              type="submit"
-            >
-              Rechercher
+            <label for="lieu">
+              <i class="fa-solid fa-location-dot"></i>
+            </label>
+            <input type="text" id="lieu" placeholder="Marseille, France" />
+            <button type="submit">
+              <i class="fa-solid fa-magnifying-glass"></i>
+              <span>Rechercher</span>
             </button>
           </div>
+          <!-- ____________ Filtres _______________________ -->
           <div class="div-filtres">
-            <h2>Filtres</h2>
+            <p>Filtres</p>
             <div class="filtres">
-              <div class="checkbox">
+              <div class="bouton-filtre">
                 <i class="fa-solid fa-money-bill-wave"></i>
-                <input type="checkbox" name="" id="economique" />
-                <label for="economique">Economique</label>
+                <p>Economique</p>
               </div>
-              <div class="checkbox">
+              <div class="bouton-filtre">
                 <i class="fa-solid fa-child-reaching"></i>
-                <input type="checkbox" name="" id="familial" />
-                <label for="familial">Familial</label>
+                <p>Familial</p>
               </div>
-              <div class="checkbox">
+              <div class="bouton-filtre">
                 <i class="fa-solid fa-heart"></i>
-                <input type="checkbox" name="" id="romantique" />
-                <label for="romantique">Romantique</label>
+                <p>Romantique</p>
               </div>
-              <div class="checkbox">
+              <div class="bouton-filtre">
                 <i class="fa-solid fa-dog"></i>
-                <input type="checkbox" name="" id="animaux" />
-                <label for="animaux">Animaux</label>
+                <p>Animaux autorisés</p>
               </div>
             </div>
           </div>
         </form>
-        <p>
-          <i class="fa-solid fa-info"></i> Plus de 500 logements sont
-          disponibles dans cette ville
-        </p>
+        <!-- ____________ info _______________________ -->
+        <div class="info">
+          <i class="fa-solid fa-info"></i>
+          <p>Plus de 500 logements sont disponibles dans cette ville</p>
+        </div>
       </section>
       <div class="div-hebergements">
-        <!-- ------------- aside -------------------------------- -->
-        <aside>
-
-        </aside>
-        <!-- ------------- section hebergements -------------------------------- -->
-        <section class="hebergements">
-
-        </section>
+        <!-- ======== aside ================ -->
+        <aside></aside>
+        <!-- ======== section hebergements ================ -->
+        <section class="hebergements"></section>
       </div>
-        <!-- ------------- section activités -------------------------------- -->
-        <section class="activites"></section>
-      
+      <!-- ======== section activités ================ -->
+      <section class="activites"></section>
     </main>
-    <!-- ------------- footer -------------------------------- -->
+    <!-- ======== pour plus tard ================ -->
+    <i class="fa-solid fa-star"></i>
+    <i class="fa-regular fa-star"></i>
+    <!-- ======== footer ================ -->
+
     <footer></footer>
   </body>
 </html>

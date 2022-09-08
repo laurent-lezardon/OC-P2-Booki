@@ -31,7 +31,16 @@ a {
   text-decoration: none;
 }
 
+h1,
+h2 {
+  font-size: 20px;
+}
 
+input,
+label,
+button {
+  font-weight: bold;
+}
 
 /* ============ HEADER =======================*/
 
@@ -52,7 +61,7 @@ nav a {
   width: 163px;
   padding-top: 48px;
   text-align: center;
-  font-weight: bolder;
+
   color: black;
   transition: 0.2s;
 }
@@ -69,7 +78,8 @@ nav a:hover {
   position: relative;
 }
 
-.recherche button {
+.recherche button,
+.fa-magnifying-glass {
   height: 100%;
   border-radius: 0 15px 15px 0;
   position: absolute;
@@ -79,19 +89,36 @@ nav a:hover {
   color: white;
   padding: 18px;
 }
-.recherche i {
+
+.fa-location-dot {
+  display: inline-block;
   height: 100%;
   width: 50px;
   border-radius: 15px 0 0 15px;
+  font-size: 24px;
+  padding-top: 15px;
 
   background-color: var(--grey);
   position: absolute;
   text-align: center;
 }
+.fa-magnifying-glass {
+  left: 0px;
+  top: 0px;
+  display: none;
+}
+.fa-magnifying-glass + .fa-solid {
+  display: none;
+}
 .recherche input {
   height: 100%;
   position: absolute;
   left: 50px;
+  border: solid 1px var(--grey);
+}
+
+.recherche button:hover {
+  cursor: pointer;
 }
 
 /* ------------- filtres --------------- */
@@ -99,34 +126,63 @@ nav a:hover {
 .div-filtres {
   display: flex;
   margin: 32px 0;
+  flex-wrap: wrap;
 }
-.div-filtres h2 {
-  padding-right: 40px;
+.div-filtres p {
+  font-weight: bold;
+  padding-right: 20px;
 }
 .filtres {
   display: flex;
-  
+  flex-wrap: wrap;
+}
+.bouton-filtre {
+  display: flex;
+  align-content: center;
 }
 
-
-
-.checkbox {
-  width: fit-content;
-  margin-right: 40px;
-}
-.checkbox input {
-  display: none;
-}
-.checkbox label {
-  display: inline-block;
-  padding: 15px;
+.bouton-filtre p {
+  height: 50px;
   border: solid 2px var(--grey);
   border-radius: 25px;
+  padding-left: 50px;
+  margin-left: -40px;
+  margin-top: 0;
+  margin-right: 10px;
+  line-height: 50px;
+  z-index: -1;
   transition: 0.3s;
 }
-.checkbox input:checked + label {
-  background-color: var(--grey);
-  border: solid 1px var(--blue)
+
+.bouton-filtre i {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+  background-color: var(--light-blue);
+  text-align: center;
+  line-height: 50px;
+}
+.bouton-filtre:hover {
+  font-size: larger;
+}
+/* ------------- info --------------- */
+.info {
+  display: flex;
+}
+.info i {
+  height: 25px;
+  width: 25px;
+  font-size: 15px;
+  color: var(--blue);
+  border: solid 4px var(--grey);
+  border-radius: 50%;
+  text-align: center;
+}
+
+.info p {
+  margin-top: 0px;
+  margin-left: 20px;
 }
 
 /* ============ MEDIA QUERIES =======================*/
@@ -149,5 +205,12 @@ nav a:hover {
   nav a:hover {
     border-bottom: solid var(--blue) 2px;
     border-top: none;
+  }
+  .recherche button span {
+    display: none;
+  }
+
+  .fa-magnifying-glass {
+    display: inline-block;
   }
 }
