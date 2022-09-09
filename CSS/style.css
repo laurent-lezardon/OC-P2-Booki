@@ -49,20 +49,20 @@ button {
   justify-content: space-between;
   align-items: center;
 }
-nav {
-  align-self: flex-start;
-}
+
 header img {
   transform: scale(0.5);
+}
+/* ------------- nav --------------- */
+nav {
+  align-self: flex-start;
 }
 
 nav a {
   display: inline-block;
   width: 163px;
-  padding-top: 48px;
+  padding-top: 18px;
   text-align: center;
-
-  color: black;
   transition: 0.2s;
 }
 
@@ -78,6 +78,25 @@ nav a:hover {
   position: relative;
 }
 
+.fa-location-dot {
+  display: inline-block;
+  height: 100%;
+  width: 50px;
+  border-radius: 15px 0 0 15px;
+  font-size: 24px;
+  line-height: 50px;
+  
+
+  background-color: var(--grey);
+  position: absolute;
+  text-align: center;
+}
+.recherche input {
+  height: 100%;
+  position: absolute;
+  left: 50px;
+  border: solid 1px var(--grey);
+}
 .recherche button,
 .fa-magnifying-glass {
   height: 100%;
@@ -88,37 +107,18 @@ nav a:hover {
   border: none;
   color: white;
   padding: 18px;
+  transition: 0.2s ease-in-out;
 }
-
-.fa-location-dot {
-  display: inline-block;
-  height: 100%;
-  width: 50px;
-  border-radius: 15px 0 0 15px;
-  font-size: 24px;
-  padding-top: 15px;
-
-  background-color: var(--grey);
-  position: absolute;
-  text-align: center;
-}
+.recherche button .fa-solid,
 .fa-magnifying-glass {
   left: 0px;
   top: 0px;
   display: none;
 }
-.fa-magnifying-glass + .fa-solid {
-  display: none;
-}
-.recherche input {
-  height: 100%;
-  position: absolute;
-  left: 50px;
-  border: solid 1px var(--grey);
-}
 
 .recherche button:hover {
   cursor: pointer;
+  transform: scale(1.1);
 }
 
 /* ------------- filtres --------------- */
@@ -165,18 +165,26 @@ nav a:hover {
 }
 
 /* test bouton .checkbox */
-.checkbox input {
-  display: none;
+
+.checkbox {
+margin-bottom: 1rem;
 }
 
-.checkbox input:checked+label {
-  color: var(--blue);
-  font-size: larger;
+.checkbox input {
+  display: none;
+  color: black;
 }
-.checkbox input:hover+label {
+
+
+.checkbox input:checked + label span{
+  color: var(--blue);
+  /* background-color: var(--grey); */
+  border: solid 1px var(--blue);
+}
+.checkbox input:hover + label {
   color: var(--blue);
 }
-.checkbox labal {
+.checkbox label {
   position: relative;
 }
 .checkbox label i {
@@ -189,11 +197,12 @@ nav a:hover {
   text-align: center;
   line-height: 50px;
   z-index: +1;
+  left: -1px;
 }
 
 .checkbox label span {
   display: inline-block;
-  position: absolute;
+  /* position: absolute; */
   height: 50px;
   border: solid 2px var(--grey);
   border-radius: 25px;
@@ -201,6 +210,7 @@ nav a:hover {
   padding-right: 15px;
   margin-top: 0;
   margin-right: 10px;
+  margin-left: 0px;
   line-height: 50px;
   /* z-index: -1; */
   transition: 0.3s;
@@ -209,7 +219,6 @@ nav a:hover {
   font-size: larger;
   cursor: pointer;
 }
-
 
 /* ------------- info --------------- */
 .info {
@@ -254,7 +263,11 @@ nav a:hover {
   .recherche button span {
     display: none;
   }
+  .recherche button .fa-solid {
+    display: in;
+  }
 
+  .recherche button .fa-solid,
   .fa-magnifying-glass {
     display: inline-block;
   }
