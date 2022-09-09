@@ -190,6 +190,7 @@ margin-bottom: 1rem;
 .checkbox label i {
   position: absolute;
   display: inline-block;
+  color: var(--blue);
   width: 50px;
   height: 50px;
   border-radius: 25px;
@@ -213,7 +214,7 @@ margin-bottom: 1rem;
   margin-left: 0px;
   line-height: 50px;
   /* z-index: -1; */
-  transition: 0.3s;
+  transition: 0.2s;
 }
 .bouton-filtre:hover {
   font-size: larger;
