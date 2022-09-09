@@ -163,9 +163,54 @@ nav a:hover {
   text-align: center;
   line-height: 50px;
 }
-.bouton-filtre:hover {
+
+/* test bouton .checkbox */
+.checkbox input {
+  display: none;
+}
+
+.checkbox input:checked+label {
+  color: var(--blue);
   font-size: larger;
 }
+.checkbox input:hover+label {
+  color: var(--blue);
+}
+.checkbox labal {
+  position: relative;
+}
+.checkbox label i {
+  position: absolute;
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+  background-color: var(--light-blue);
+  text-align: center;
+  line-height: 50px;
+  z-index: +1;
+}
+
+.checkbox label span {
+  display: inline-block;
+  position: absolute;
+  height: 50px;
+  border: solid 2px var(--grey);
+  border-radius: 25px;
+  padding-left: 60px;
+  padding-right: 15px;
+  margin-top: 0;
+  margin-right: 10px;
+  line-height: 50px;
+  /* z-index: -1; */
+  transition: 0.3s;
+}
+.bouton-filtre:hover {
+  font-size: larger;
+  cursor: pointer;
+}
+
+
 /* ------------- info --------------- */
 .info {
   display: flex;
