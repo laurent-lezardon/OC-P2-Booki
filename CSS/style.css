@@ -240,6 +240,30 @@ margin-bottom: 1rem;
   margin-left: 20px;
 }
 
+/* ============ HEBERGEMENTS =======================*/
+.hebergements {
+  background-color: var(--grey);
+  padding: 15px;
+  
+}
+.h-card {
+  width: 250px;
+  background-color: white;
+  padding: 5px;
+  border: solid 1px var(--grey);
+  border-radius: 15px;
+}
+.h-card-img {
+  height: 115px;
+  object-fit: contain;
+  overflow: hidden;
+  border-radius: 15px 15px 0 0;
+}
+
+.h-card-img img {
+  /* object-fit: contain;
+  overflow: hidden; */
+}
 /* ============ MEDIA QUERIES =======================*/
 
 /* ============ MOBILE < 768px  =======================*/
@@ -273,3 +297,5 @@ margin-bottom: 1rem;
     display: inline-block;
   }
 }
+
+
