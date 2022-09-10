@@ -241,14 +241,23 @@ margin-bottom: 1rem;
 }
 
 /* ============ HEBERGEMENTS =======================*/
+
+.div-hebergements {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .hebergements {
   background-color: var(--grey);
   padding: 15px;
   
+  
 }
+/* ------------- cards hebergement ---------- */
 .h-cards {
   display: flex;
   flex-wrap: wrap;
+  
 }
 .h-card {
   width: 250px;
@@ -264,11 +273,33 @@ margin-bottom: 1rem;
   border-radius: 15px 15px 0 0;
 }
 
-.h-card-img img {
-  max-width: 100%;
-  height: auto;
-}
+/* ------------- cards hebergement ---------- */
 
+.p-card {
+  display: flex;
+  width: 344px;
+  background-color: white;
+  padding: 5px;
+  border: solid 1px var(--grey);
+  border-radius: 15px;
+}
+.p-card-img {
+  width: 127px;
+  height: 133px;
+  object-fit:contain;
+  overflow: hidden;
+  border-radius: 15px 0 0 15px;
+  margin-right: 10px;
+  
+}
+.p-card-img img {
+  max-height: 100%;
+  width: auto;
+}
+.p-card-content h3{
+  margin-top: 0;
+  /* font-size: ; */
+}
 /* ------------- gestion des etoiles ---------- */
 .stars {
   color: var(--blue);
