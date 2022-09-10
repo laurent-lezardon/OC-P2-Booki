@@ -246,6 +246,10 @@ margin-bottom: 1rem;
   padding: 15px;
   
 }
+.h-cards {
+  display: flex;
+  flex-wrap: wrap;
+}
 .h-card {
   width: 250px;
   background-color: white;
@@ -261,9 +265,23 @@ margin-bottom: 1rem;
 }
 
 .h-card-img img {
-  /* object-fit: contain;
-  overflow: hidden; */
+  max-width: 100%;
+  height: auto;
 }
+
+/* ------------- gestion des etoiles ---------- */
+.stars {
+  color: var(--blue);
+}
+
+.no-four-stars span:last-child {
+  color: var(--grey);
+}
+
+.no-three-stars span:nth-child(4) {
+  color: var(--grey);
+}
+
 /* ============ MEDIA QUERIES =======================*/
 
 /* ============ MOBILE < 768px  =======================*/
