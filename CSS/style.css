@@ -22,10 +22,16 @@ body {
   margin: 0 auto;
 }
 
+
 header,
 section,
 footer {
   padding: 0 12px;
+}
+
+section, aside {
+  margin-bottom: 15px;
+  border-radius: 20px;
 }
 a {
   text-decoration: none;
@@ -245,6 +251,8 @@ margin-bottom: 1rem;
 .div-hebergements {
   display: flex;
   flex-wrap: wrap;
+  flex-direction: row-reverse;
+  justify-content: start;
 }
 
 .hebergements {
@@ -253,10 +261,12 @@ margin-bottom: 1rem;
   
   
 }
-/* ------------- cards hebergement ---------- */
+/* ------------- cards hebergement (h) ---------- */
 .h-cards {
   display: flex;
   flex-wrap: wrap;
+  max-width:850px ;
+  justify-content: space-between;
   
 }
 .h-card {
@@ -268,12 +278,14 @@ margin-bottom: 1rem;
 }
 .h-card-img {
   height: 115px;
-  object-fit: contain;
+  width: 100%;
+  
   overflow: hidden;
   border-radius: 15px 15px 0 0;
 }
 
-/* ------------- cards hebergement ---------- */
+
+/* ------------- cards hebergement populaires (p)---------- */
 
 .p-card {
   display: flex;
@@ -292,14 +304,28 @@ margin-bottom: 1rem;
   margin-right: 10px;
   
 }
-.p-card-img img {
-  max-height: 100%;
-  width: auto;
+.paysage {
+  /* height: 100%; */
+  width: 100%;
+  object-fit: contain;
+}
+.portrait {
+  width: 100%;
+  /* height: 100%; */
+  object-fit: contain;
+}
+.p-card-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .p-card-content h3{
   margin-top: 0;
-  /* font-size: ; */
+
+ 
 }
+
+
 /* ------------- gestion des etoiles ---------- */
 .stars {
   color: var(--blue);
