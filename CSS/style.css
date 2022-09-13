@@ -321,7 +321,7 @@ aside::after {
   /* border: solid 1px var(--grey); */
   border-radius: 15px;
   box-shadow: var(--box-shadow);
-  margin: auto;
+  /* margin: auto; */
   margin-bottom: 15px;
   
 }
@@ -355,7 +355,7 @@ aside::after {
   box-shadow: var(--box-shadow);
   border: solid 1px var(--grey);
   border-radius: 15px;
-  margin: 10px;
+  margin-bottom: 15px;
 }
 
 .p-card-img {
