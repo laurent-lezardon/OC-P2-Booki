@@ -9,6 +9,7 @@
   --blue: #0065fc;
   --light-blue: #deebff;
   --grey: #f2f2f2;
+  --box-shadow: 0 5px 10px #999;
 }
 
 /* ============ reglages =======================*/
@@ -317,11 +318,12 @@ aside::after {
   width: 250px;
   background-color: white;
   padding: 5px;
-  border: solid 1px var(--grey);
+  /* border: solid 1px var(--grey); */
   border-radius: 15px;
-  box-shadow: 0 5px 10px #999;
+  box-shadow: var(--box-shadow);
   margin: auto;
   margin-bottom: 15px;
+  
 }
 
 .h-card:hover {
@@ -350,7 +352,7 @@ aside::after {
   width: 344px;
   background-color: white;
   padding: 5px;
-  box-shadow: 0 5px 10px #999;
+  box-shadow: var(--box-shadow);
   border: solid 1px var(--grey);
   border-radius: 15px;
   margin: 10px;
@@ -413,20 +415,27 @@ aside::after {
 .card-activites {
     display: flex;
     flex-wrap: wrap;
+    column-gap: 2%;
 }
 
 
 .a-card {
   width: 300px;
-  height: 450px;
+  /* height: 450px; */
   background-color: white;
-  box-shadow: 0 5px 10px #999;
+  box-shadow: var(--box-shadow);
   border-radius: 15px;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: space-between;
+  
+  
+  /* margin-bottom: 15px; */
+  /* margin: auto; */
 }
-
+.a-card-img-XL {
+    margin-bottom: 15px;
+}
 .a-card:hover {
   cursor: pointer;
 }
@@ -461,7 +470,8 @@ aside::after {
     height: 450px;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
+    justify-content: space-between;
+    margin-bottom: 25px;
 }
 
 .card-img-medium {
