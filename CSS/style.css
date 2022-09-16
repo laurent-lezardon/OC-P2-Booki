@@ -578,8 +578,13 @@ footer a {
     .hebergements .div-hebergements .card-activites,
     .footer,
     .h-cards,
+    .a-card,
     .a-card-zone {
         display: block;
+    }
+
+    .a-card-zone {
+        height: auto;
     }
 
     .h-cards,
