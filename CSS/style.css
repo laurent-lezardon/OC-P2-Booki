@@ -10,6 +10,7 @@
   --light-blue: #deebff;
   --grey: #f2f2f2;
   --box-shadow: 0 5px 10px rgb(194, 192, 192);
+  --gap: 32px;
 }
 
 /* ============ reglages =======================*/
@@ -88,6 +89,7 @@ nav a {
   color: black;
   width: 163px;
   padding-top: 18px;
+  
   text-align: center;
   transition: 0.2s;
 }
@@ -100,7 +102,7 @@ nav a:hover {
 /* ============ Div Form -  RECHERCHE =======================*/
 /* ------------- recherche --------------- */
 .form {
-    margin-bottom: 32px;
+  margin-bottom: 32px;
 }
 
 .recherche-flex label i {
@@ -196,7 +198,6 @@ nav a:hover {
 }
 
 .bouton-filtre i {
-
   width: 50px;
   height: 50px;
   border-radius: 25px;
@@ -372,7 +373,7 @@ aside {
 aside::after {
   content: "\f005";
   font: var(--fa-font-solid);
-  font-size: 1.5em;
+  font-size: 25px;
   /* color: var(--blue); */
   position: absolute;
   top: 42px;
@@ -454,9 +455,17 @@ aside::after {
   flex-wrap: wrap;
   justify-content: space-between;
 }
-
+.a-card-zone {
+  width: 300px;
+  height: 450px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 25px;
+}
 .a-card {
   width: 300px;
+  height: fit-content;
   /* height: 450px; */
   background-color: white;
   box-shadow: var(--box-shadow);
@@ -490,15 +499,7 @@ aside::after {
   border-radius: 0 0 15px 15px;
 }
 
-.a-card-zone {
-  width: 300px;
-  height: 450px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  margin-bottom: 25px;
-}
-/* ------------- gestion des taimles des images ---------- */
+/* ------------- gestion des tailles des images ---------- */
 .card-img-small {
   height: 110px;
 }
@@ -534,7 +535,7 @@ footer {
 
 .footer {
   width: calc(100% / 3);
-  min-width: 300px;
+  min-width: 250px;
   /* padding: 48px; */
 }
 
@@ -547,9 +548,46 @@ footer h2 {
 }
 
 /* ============ MEDIA QUERIES =======================*/
+
+/* ============ Breakpoint 1  < 991px  =======================*/
+
+@media screen and (max-width: 991px) {
+  .div-hebergements {
+    display: block;
+  }
+  .p-card {
+    width: 100%;
+    height: 160px;
+  }
+  .p-card-img {
+    width: 127px;
+    height: 150px;
+  }
+}
 /* ============ MOBILE < 768px  =======================*/
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
+    h1,
+    h2,
+    i {
+      font-size: 24px;
+      font-weight: bolder;
+    }
+    p {
+      font-size: 18px;
+    }
+    
+    h3,
+    input,
+    label,
+    button {
+      font-weight: bolder;
+      font-size: 18px;
+    }
+    main,
+  header {
+    padding: 0 1%;
+  }
   .header {
     display: block;
     padding: 0;
@@ -569,7 +607,12 @@ footer h2 {
     border-bottom: solid var(--blue) 2px;
     border-top: none;
   }
-
+h1 {
+    margin-top: 40px;
+}
+.form {
+    margin-top: 40px;
+}
   .recherche button span {
     display: none;
   }
@@ -578,29 +621,42 @@ footer h2 {
     display: none;
   }
 
-  .recherche button .fa-solid {
-    display: inline-block;
-  }
-
   .submit .fa-solid,
   .fa-magnifying-glass {
     display: inline-block;
-    position: absolute;
-    left: 0;
-    top: 0;
   }
-}
-
-/* ============ MOBILE < 567px  =======================*/
-@media screen and (max-width: 567px) {
-  .hebergements .div-hebergements .card-activites,
+  .div-filtres {  
+    margin: 40px 0;
+  }
+  .hebergements,
+  .card-activites,
   .footer,
   .h-cards,
   .a-card,
   .a-card-zone {
     display: block;
   }
+  .hebergements,
+  .populaires {
+    padding: 25px 1%;
+    margin: 0;
 
+  }
+  .hebergements {
+    background-color: white;
+  }
+  aside::after {
+    /* content: "\f005";
+    font: var(--fa-font-solid);
+    font-size: 25px; */
+    /* color: var(--blue); */
+    /* position: absolute; */
+    top: 42px;
+    right: 2px;
+  }
+.p-card,.h-card {
+    margin-bottom: 10px;
+}
   .a-card-zone {
     height: auto;
   }
@@ -613,14 +669,10 @@ footer h2 {
   .a-card {
     width: 100%;
   }
-
-  .p-card-img {
-    height: 150px;
-  }
-
   .h-card-img,
   .card-img-XXL,
-  .card-img-XL .card-img-long,
+  .card-img-XL,
+  .card-img-long,
   .card-img-medium,
   .card-img-small {
     height: 125px;
