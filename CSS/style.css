@@ -89,7 +89,7 @@ nav a {
   color: black;
   width: 163px;
   padding-top: 18px;
-  
+
   text-align: center;
   transition: 0.2s;
 }
@@ -99,15 +99,13 @@ nav a:hover {
   color: var(--blue);
 }
 
-/* ============ Div Form -  RECHERCHE =======================*/
-/* ------------- recherche --------------- */
+/* ============ Div Form -  Formulaire de recherche =======================*/
+
 .form {
   margin-bottom: 32px;
 }
-
+/* ------------- recherche --------------- */
 .recherche-flex label i {
-  /* display: inline-block; */
-
   width: 50px;
   height: 100%;
   border-radius: 15px 0 0 15px;
@@ -147,8 +145,9 @@ nav a:hover {
 
 .submit i {
   position: absolute;
-  left: 0px;
+  left: -15px;
   top: 0px;
+  border-radius: 15px;
   display: none;
 }
 
@@ -167,7 +166,6 @@ nav a:hover {
 
 .div-filtres p {
   font-weight: bold;
-
   padding-right: 20px;
   line-height: 50px;
   vertical-align: middle;
@@ -179,34 +177,7 @@ nav a:hover {
   flex-wrap: wrap;
 }
 
-.bouton-filtre {
-  display: flex;
-  align-content: center;
-}
-
-.bouton-filtre p {
-  height: 50px;
-  border: solid 2px var(--grey);
-  border-radius: 25px;
-  padding-left: 50px;
-  margin-left: -40px;
-  margin-top: 0;
-  margin-right: 10px;
-  line-height: 50px;
-  z-index: -1;
-  transition: 0.3s;
-}
-
-.bouton-filtre i {
-  width: 50px;
-  height: 50px;
-  border-radius: 25px;
-  background-color: var(--light-blue);
-  text-align: center;
-  line-height: 50px;
-}
-
-/* filtres de type  .checkbox */
+/* ----------- filtres de type  .checkbox ----------- */
 
 .checkbox {
   margin-bottom: 1rem;
@@ -245,7 +216,6 @@ nav a:hover {
 
 .checkbox label span {
   display: inline-block;
-  /* position: absolute; */
   height: 50px;
   border: solid 2px var(--grey);
   border-radius: 25px;
@@ -254,17 +224,12 @@ nav a:hover {
   margin-top: 0;
   margin-right: 10px;
   margin-left: 0px;
-  line-height: 50px;
-  /* z-index: -1; */
+  line-height: 45px;
   transition: 0.2s;
 }
 
-.bouton-filtre:hover {
-  color: var(--light-blue);
-  cursor: pointer;
-}
 
-/* ------------- info --------------- */
+/* ------------- champ info --------------- */
 
 .info {
   display: flex;
@@ -275,15 +240,14 @@ nav a:hover {
   height: 25px;
   width: 25px;
   font-size: 13px;
-
-  line-height: 25px;
+  line-height: 20px;
   color: var(--blue);
   border: solid 2px var(--grey);
   border-radius: 50%;
   text-align: center;
 }
 
-.info p {
+.info span {
   margin: 0;
   padding-left: 20px;
   vertical-align: middle;
@@ -300,7 +264,6 @@ aside {
 .div-hebergements {
   display: flex;
   flex-wrap: wrap;
-  /* flex-direction: row-reverse; */
   justify-content: space-between;
 }
 
@@ -320,7 +283,6 @@ aside {
 
 .hebergements {
   max-width: 865px;
-  /* margin-right: 15px; */
 }
 
 .h-cards {
@@ -334,11 +296,8 @@ aside {
   width: 250px;
   background-color: white;
   padding: 5px;
-  /* border: solid 1px var(--grey); */
   border-radius: 15px;
   box-shadow: var(--box-shadow);
-  /* margin: auto; */
-  /* margin-bottom: 15px; */
 }
 
 .h-card-img {
@@ -367,14 +326,12 @@ aside {
 aside {
   position: relative;
   order: 2;
-  /* padding: 40px; */
 }
 
 aside::after {
   content: "\f005";
   font: var(--fa-font-solid);
   font-size: 25px;
-  /* color: var(--blue); */
   position: absolute;
   top: 42px;
   right: 42px;
@@ -387,7 +344,6 @@ aside::after {
   box-shadow: var(--box-shadow);
   border: solid 1px var(--grey);
   border-radius: 15px;
-  /* margin-bottom: 32px; */
 }
 
 .p-card-img {
@@ -408,16 +364,15 @@ aside::after {
 }
 
 .paysage {
-  /* height: 100%; */
   width: 100%;
 }
 
 .portrait {
-  /* width: 100%; */
-  /* min-width: 127px; */
   height: 100%;
 }
-
+.portrait-paysage {
+  height: 100%;
+}
 .p-card-content {
   display: flex;
   flex-direction: column;
@@ -466,7 +421,6 @@ aside::after {
 .a-card {
   width: 300px;
   height: fit-content;
-  /* height: 450px; */
   background-color: white;
   box-shadow: var(--box-shadow);
   border-radius: 15px;
@@ -477,10 +431,8 @@ aside::after {
 
 .a-card-img {
   width: 100%;
-
   overflow: hidden;
   position: relative;
-
   border-radius: 15px 15px 0 0;
 }
 
@@ -530,13 +482,11 @@ footer {
   display: flex;
   flex-wrap: wrap;
   padding: 32px 32px 32px 52px;
-  /* justify-content: space-between; */
 }
 
 .footer {
   width: calc(100% / 3);
   min-width: 250px;
-  /* padding: 48px; */
 }
 
 footer a {
@@ -552,6 +502,25 @@ footer h2 {
 /* ============ Breakpoint 1  < 991px  =======================*/
 
 @media screen and (max-width: 991px) {
+  /* ------------- taille des polices -------------- */
+  h1,
+  h2,
+  i {
+    font-size: 22px;
+    font-weight: bolder;
+  }
+  p {
+    font-size: 17px;
+  }
+
+  h3,
+  input,
+  label,
+  button {
+    font-weight: bolder;
+    font-size: 17px;
+  }
+  /* ------------- adaptation du aside (populaire) idem mobile -------------- */
   .div-hebergements {
     display: block;
   }
@@ -563,31 +532,49 @@ footer h2 {
     width: 127px;
     height: 150px;
   }
+  aside::after {
+    top: 35px;
+    right: 30px;
+  }
+  /* ------------- adaptation des marges et paddings -------------- */
+  .hebergements,
+  .populaires {
+    padding: 15px 3%;
+    margin-bottom: 15px;
+  }
+    /* ------------- adaptation des cards -------------- */
+    .p-card,
+    .h-card {
+      margin-bottom: 10px;
+    }
 }
 /* ============ MOBILE < 768px  =======================*/
 
 @media screen and (max-width: 767px) {
-    h1,
-    h2,
-    i {
-      font-size: 24px;
-      font-weight: bolder;
-    }
-    p {
-      font-size: 18px;
-    }
-    
-    h3,
-    input,
-    label,
-    button {
-      font-weight: bolder;
-      font-size: 18px;
-    }
-    main,
+  /* ------------- taille des polices -------------- */
+  h1,
+  h2,
+  i {
+    font-size: 24px;
+    font-weight: bolder;
+  }
+  p {
+    font-size: 18px;
+  }
+
+  h3,
+  input,
+  label,
+  button {
+    font-weight: bolder;
+    font-size: 18px;
+  }
+  /* ------------- gestion des blocks -------------- */
+  main,
   header {
     padding: 0 1%;
   }
+  /* ------------- adaptation du header -------------- */
   .header {
     display: block;
     padding: 0;
@@ -607,12 +594,12 @@ footer h2 {
     border-bottom: solid var(--blue) 2px;
     border-top: none;
   }
-h1 {
+  h1 {
     margin-top: 40px;
-}
-.form {
+  }
+  .form {
     margin-top: 40px;
-}
+  }
   .recherche button span {
     display: none;
   }
@@ -625,9 +612,10 @@ h1 {
   .fa-magnifying-glass {
     display: inline-block;
   }
-  .div-filtres {  
+  .div-filtres {
     margin: 40px 0;
   }
+  /* ------------- gestion des blocs -------------- */
   .hebergements,
   .card-activites,
   .footer,
@@ -640,25 +628,22 @@ h1 {
   .populaires {
     padding: 25px 1%;
     margin: 0;
-
   }
   .hebergements {
     background-color: white;
   }
   aside::after {
-    /* content: "\f005";
-    font: var(--fa-font-solid);
-    font-size: 25px; */
-    /* color: var(--blue); */
-    /* position: absolute; */
     top: 42px;
     right: 2px;
   }
-.p-card,.h-card {
-    margin-bottom: 10px;
-}
+  /* ------------- adaptation des cards -------------- */
   .a-card-zone {
     height: auto;
+    margin: 0;
+  }
+  .a-card {
+    margin-bottom: 15px;
+    margin-top: 0;
   }
 
   .h-cards,
@@ -676,5 +661,9 @@ h1 {
   .card-img-medium,
   .card-img-small {
     height: 125px;
+  }
+  .portrait-paysage {
+    width: 100%;
+    height: auto;
   }
 }
