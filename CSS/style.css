@@ -31,6 +31,7 @@ body {
 
 a {
   text-decoration: none;
+  color: black;
 }
 
 h1,
@@ -69,9 +70,7 @@ header {
 .logo {
   margin: 15px 0;
 }
-h1 {
-  font-weight: bolder;
-}
+
 header img {
   height: 36px;
   padding-left: 15px;
@@ -278,6 +277,12 @@ aside {
 }
 .p-card:last-child {
   margin-bottom: 0;
+}
+.afficher-plus {
+  padding: 15px;
+  font-size: 20px;
+  font-weight: bold;
+
 }
 /* ------------- cards hebergement (h) ---------- */
 
