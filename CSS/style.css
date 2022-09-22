@@ -485,13 +485,14 @@ aside::after {
 footer {
   background-color: var(--grey);
   display: flex;
+  justify-content: space-between;
   flex-wrap: wrap;
   padding: 32px 32px 32px 52px;
 }
 
 .footer {
   width: calc(100% / 3);
-  min-width: 250px;
+  min-width: 240px;
 }
 
 footer a {
