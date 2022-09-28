@@ -505,9 +505,9 @@ footer h2 {
 
 /* ============ MEDIA QUERIES =======================*/
 
-/* ============ Breakpoint 1  < 991px  =======================*/
+/* ============ Breakpoint 1  <= 992px  =======================*/
 
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 992px) {
   /* ------------- taille des polices -------------- */
   h1,
   h2,
@@ -554,9 +554,9 @@ footer h2 {
       margin-bottom: 10px;
     }
 }
-/* ============ MOBILE < 768px  =======================*/
+/* ============ MOBILE <= 768px  =======================*/
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
   /* ------------- taille des polices -------------- */
   h1,
   h2,
