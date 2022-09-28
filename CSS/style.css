@@ -272,10 +272,10 @@ aside {
   padding: 32px;
 }
 .h-card,
-.p-card {
+aside a {
   margin-bottom: 32px;
 }
-.p-card:last-child {
+aside a:last-child {
   margin-bottom: 0;
 }
 .afficher-plus {
@@ -340,6 +340,10 @@ aside::after {
   position: absolute;
   top: 42px;
   right: 42px;
+}
+aside a {
+  display: block;
+  /* margin-bottom: 20px; */
 }
 .p-card {
   display: flex;
@@ -550,7 +554,7 @@ footer h2 {
   }
     /* ------------- adaptation des cards -------------- */
     .p-card,
-    .h-card {
+    .aside a {
       margin-bottom: 10px;
     }
 }
@@ -589,7 +593,9 @@ footer h2 {
   .logo {
     text-align: center;
   }
-
+nav {
+  margin-right: 0;
+}
   nav a {
     width: 50%;
     padding-top: 0;
@@ -601,7 +607,11 @@ footer h2 {
     border-top: none;
   }
   h1 {
-    margin-top: 40px;
+    
+    margin: 40px 1% 0 1%;
+  }
+  header p {
+    margin-right: 1%;
   }
   .form {
     margin-top: 40px;
@@ -629,6 +639,9 @@ footer h2 {
   .a-card,
   .a-card-zone {
     display: block;
+  }
+  main {
+    padding: 0 2%;
   }
   .hebergements,
   .populaires {
